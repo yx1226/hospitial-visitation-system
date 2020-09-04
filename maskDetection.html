@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mask Detection</title>
+
+</head>
+<body>
+	<div id="non-capable">
+		<p></p>
+	</div>
+
+	<div class="capable">
+		<div class="camera-denied">
+			<h2>To continue exercise please refresh the page and allow your webcam</h2>
+		</div>
+
+		<div class="camera-allowed">
+			<div class="video" style="float:left;">
+				<video autoplay=""></video>
+				<button id="captureButton">Check</button>
+			</div>
+
+			<div class="capture">
+				<canvas id="myCanvas" style="width:200ps; height:200px"></canvas>
+				<div class="analysisWrapper">
+					<h1>Analysis</h1>
+					<pre id="analysis">Analysis result shouls show up here</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src=""></script>
+</body>
+</html>
+
+<script type="text/javascript" src="webcam.js"></script>

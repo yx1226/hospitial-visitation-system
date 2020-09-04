@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Appointment</title>
+
+	<link rel="stylesheet" type = "text/css" href="style1.css">
+	<link href="https://fots.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<!--HEADER-->
+	<div class = "mainheader">
+		<div>
+			<img src = "image/logo.png">
+		</div>
+
+		<nav>
+			<a href="index.html">HOME</a>
+		</nav>
+
+		<div class="menubtn">
+			<button>HelpLine</button>
+		</div>
+	</div>
+
+<!--
+Create two forms in a box:
+1. Visitor
+   a. Insert the IC for the chip reading
+   b. Will go to maskDetection & temperatureCheckUp
+
+2. Staff
+   a. Scanning the staff plate 
+   b. Will go to database
+-->
+	<main>
+		<!--Left Section-->
+		<section class = "left-sec">
+			<h1>WELCOME</h1>
+			<div class="header">
+				<div class = "form-box">
+					
+					<!--Toggle Button-->
+					<div class="button-box">
+						<div id="btn"></div>
+						<button type="button" class="toggle-btn" onclick="visitor()">IAM Visitor</button>
+						<button type="button" class="toggle-btn" onclick="staff()">IAM Staff</button>
+					</div>
+
+					<!--Visitor-->
+					<form id="visitor" class="input-group" action="maskDetection.html" method="post">
+						<input type="text" name="" class="input-field" placeholder="Full name" >
+						<input type="text" name="" class="input-field" placeholder="IC Number (xxxxxx-xx-xxxx)">
+						<span>* Please make sure your information is correct.</span>
+						<button type="submit" class="submit-btn">Register As VISITOR</button>
+					</form>
+
+					<!--Staff-->
+					<form id="staff" class="input-group" action="#UNDER_CONSTRUCTION" method="post">
+						<input type="text" name="" class="input-field" placeholder="Staff ID">
+						<input type="password" name="" class="input-field" placeholder="Password" >
+						<button type="submit" class="submit-btn">Login</button>
+					</form>
+				</div>
+			
+			<script type="text/javascript">
+				//Sliding Animation
+				var x = document.getElementById("visitor");
+				var y = document.getElementById("staff");
+				var z = document.getElementById("btn"); 
+
+				function staff(){
+					x.style.left = "-400px";
+					y.style.left = "50px";
+					z.style.left = "120px";
+				}
+
+				function visitor(){
+					x.style.left = "50px";
+					y.style.left = "450px";
+					z.style.left = "0px";
+				}
+
+				//Autoformatting
+
+			</script>
+		</section>
+
+		<!--Right Section-->
+        <section class="right-sec">
+			<figure>
+				<img src=" ">
+			</figure>
+		</section>
+
+</main>
+</body>
+</html>
